@@ -1,0 +1,614 @@
+html {
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin:auto;
+    box-sizing: content-box;
+    width: 100%;
+    max-width: 1440px;
+    font-family: 'Raleway', sans-serif;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+}
+nav {
+    display: flex;
+    flex: 2;
+    width: auto;
+    justify-content: flex-end;
+}
+p {
+    font-size: 17px;
+    font-family:'Raleway', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+#logo {
+    display: flex;
+    grid-area: logo;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+#logo img {
+    width: 100px;
+    height: 45px;
+}
+#option {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+#signup {
+    display: flex;
+    grid-area: signup;
+    flex-direction: row;  
+    font-size: 20px; 
+    align-items: center;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 0px;
+    padding: 0;
+}
+nav li {
+    flex: 1;
+    padding: 30px; 
+    border-top:transparent 3px solid ;
+    text-align: center;
+}
+nav li:hover , nav .active{
+    border-top:#0065FC 3px solid ;
+}
+/*description*/
+h1 {
+    font-size: 32px;   
+}
+#description h1 {
+    margin-bottom: 8px;
+}
+#description p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+a:hover {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+/*filter*/
+#filterhead {
+    display: flex;
+    flex-direction: column;   
+}
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 600px;
+    font-size: 17px;
+}
+.searchloc {
+    border-style:solid;
+    border-color:#F2F2F2;
+    background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    align-items: center;
+    padding: 0 15px;
+    display: flex;
+}
+input {
+    padding: 18px 25px;
+    width: 270px;
+    border-style: solid ;
+    border-color: #F2F2F2;
+    border-right-color: transparent;
+    font-weight: bold;
+    font-size: 17px;
+}
+button {
+    display: flex;
+    background-color:  #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+    border-style: none;
+    padding: 0 20px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 17px;
+}
+button a, button a:visited {
+    color: white;
+}
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    margin-right: 30px;
+}
+#filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style-type: none;
+    align-items: center;
+    font-size: 17px;    
+}
+#filters li {
+    display: flex;
+    justify-content: space-around;    
+    transition: transform .2s;
+}
+li i.fas {
+    justify-content: center;
+    background-color: #DEEBFF ;  
+    border-radius: 50%;
+    border-width: 1px;
+    color:#0065FC;
+    border-style: none;
+    padding: 20px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    margin-left: -4px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+}
+li a {
+    text-align: center;
+    padding-right: 20px;
+    font-weight: 700;
+}
+#filters li {
+    display: flex;
+    border-style: solid;
+    border-right-color: #d4d4d4 ;
+    border-top-color:#d4d4d4 ;
+    border-bottom-color: #d4d4d4;
+    border-left-color:transparent;
+    border-radius: 35px;
+    align-items: center;
+}
+#filters li:hover {
+    background-color:  #f6f8fa;
+    transform:scale(1.025,1.025);
+}
+#info {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content:left;
+}
+#info i.fas {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #d4d4d4 ;
+    border-radius: 50%;
+    padding: 11px;
+    width: 11px;
+    height: 11px;
+    line-height: 11px;
+    justify-content: center;
+    color:#0065FC ;
+}
+#info p {
+    margin-left:18px ;
+}
+/*hotel*/
+.star {
+    display: flex;
+    width: 100%;
+    color:#0065FC ;
+    align-items: center;
+}
+.star .stargrey {
+    color:#dbd8d8;
+}
+#hotel {
+    display: flex;
+    gap: 30px;  
+}
+#hotel .morelist {
+    display: flex;
+    width: 100%;
+    padding-top: 20px;
+    font-weight: bold;
+}
+#liste_hotel {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color:#F2F2F2;
+    border-radius: 30px;
+    padding: 30px;
+}
+#hotelmarseille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;  
+    border-radius: 30px;
+    align-items: center;
+    margin: 10px 0;
+}
+#hotelmarseille .hotel {
+    background-color:#ffffff ;
+    border-radius: 25px;
+    padding: 7px;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
+}
+#hotelmarseille .hotel img {
+    display: flex;
+    flex: 2;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0px 0px;
+}
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.detail_hotel {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding: 5px;
+    flex-direction: column;
+    align-items: baseline;   
+}
+.detail_hotel p {
+    margin: 2px;
+}
+#cannebière:hover {
+    transform:scale(1.025,1.025);
+}
+#port:hover {
+    transform:scale(1.025,1.025);
+}
+#mouettes:hover {
+    transform:scale(1.025,1.025);
+}
+#la_mer {
+    order: 2;    
+}
+#la_mer:hover {
+    transform:scale(1.025,1.025);
+}
+#panier {
+    order: 4;    
+}
+#panier:hover {
+    transform:scale(1.025,1.025);
+}
+#amina {
+    order: 6; 
+}
+#amina:hover {
+    transform:scale(1.025,1.025);
+}
+/*liste populaire*/
+#liste_populaire {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+    padding: 30px;
+    flex-direction: column;
+    background-color:#F2F2F2;
+    border-radius: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+#popmarseille {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;  
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+#popmarseille .pophotel {
+    display: flex;
+    background-color:#ffffff ;
+    border-radius: 25px;
+    padding: 7px;
+    height: 130px;
+    align-content: center; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196); 
+}
+#popmarseille .pophotel img {
+    display: flex;
+    width: 140px ;
+    height: 100%;
+    margin: 0px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0px 0px 20px;
+}
+#popmarseille .hotel_description {
+    display: flex;   
+    width: 100%;
+    padding: 5px 7px;
+    flex-direction: column;
+    align-items: baseline;  
+}
+#popmarseille a {
+    display: flex;
+    width: 100%;
+}
+.hotel_description p {
+    margin: 2px;
+}
+.space {
+    flex: 1;
+}
+#title_liste {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#chart {
+    display: flex;
+    font-size: 25px;
+}
+.starpop {
+    display: flex;
+    flex: 2;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0px;
+    color:#0065FC ;
+}
+.starpop .stargrey {
+    color: #dbd8d8;
+}
+#soleil:hover {
+    transform:scale(1.025,1.025)
+}  
+
+#chambre_dhotes:hover {
+    transform:scale(1.025,1.025)
+}  
+
+#bleu_blanc:hover {
+    transform:scale(1.025,1.025)
+}  
+/*activites*/
+#activités {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;  
+    align-items: baseline;
+    border-radius: 30px;
+ 
+}
+#activités .titre {
+    margin: 0px;
+}
+#activités_marseille {
+    display: grid;
+    grid-template-areas: "vieux_port pomègues calanques garde" "vieux_port frioul calanques longchamp";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px; 
+    columns: 4;
+}
+#activités_marseille h3 {
+    padding: 15px 20px;
+}
+
+#vieux_port {
+    grid-area: vieux_port;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
+}
+#vieux_port img {
+    width: 100%; 
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#vieux_port:hover {
+    transform:scale(1.025,1.025)
+} 
+#pomègues {
+    grid-area: pomègues ;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;   
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
+}
+#pomègues img {
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#pomègues:hover {
+    transform:scale(1.025,1.025)
+}
+#frioul {
+    grid-area: frioul;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;    
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
+}
+#frioul img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#frioul:hover {
+    transform:scale(1.025,1.025)
+}
+#calanques {
+    grid-area: calanques;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);    
+}
+#calanques img {
+    width: 100%; 
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#calanques:hover {
+    transform:scale(1.025,1.025)
+}
+#garde {
+    grid-area:garde ;
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
+}
+#garde img {
+    width: 100%;
+    height: 265px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#garde:hover {
+    transform:scale(1.025,1.025)
+}
+#longchamp {
+    display: flex;
+    flex-direction: column;
+    background-color:#ffffff ;
+    border-radius: 25px;
+    object-fit: cover; 
+    -webkit-box-shadow: 0 0 10px rgb(196, 196, 196);  
+}
+#longchamp img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: 50% 30%;
+    border-radius: 25px 25px 0px 0px;
+}
+#longchamp:hover {
+    transform:scale(1.025,1.025)
+}
+/*footer*/
+footer {
+    background-color:#F2F2F2 ;
+    display: flex;
+    margin: 50px 0;
+    width: 100%;
+    padding: 30px ;
+    justify-content: space-between;
+}
+footer .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+footer li, h2 {
+    margin: 12px;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+        font-family: 'Raleway', sans-serif;
+    }
+    header {
+        display: grid;
+        grid-template-areas: "logo . signup" "nav nav nav";
+        grid-template-columns: auto 1fr auto;   
+        grid-template-rows: 1fr 1fr;
+    }
+    #logo {
+        padding-left: 20px;
+    }
+    #signup {
+        padding-right: 20px;
+    }
+    nav {
+        grid-area: nav;
+    }
+    nav ul {
+        flex: 1;
+    }
+    #form {
+        display: flex;
+        width: 100%;
+
+    }
+    #hotel {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #activités_marseille {
+        display: grid;
+        grid-template-areas: none;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 30px;  
+        border-radius: 30px;
+        align-items: center;
+        margin: 10px 0;
+    }
+    #activités_marseille .activité {
+        grid-area:unset;
+    }
+    #activités_marseille img {
+        height: 150px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
